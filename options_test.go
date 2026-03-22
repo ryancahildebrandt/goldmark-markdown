@@ -42,6 +42,26 @@ func TestRendererOptions(t *testing.T) {
 			[]Option{WithThematicBreakStyle(ThematicBreakStyleUnderlined)},
 			NewConfig(WithThematicBreakStyle(ThematicBreakStyleUnderlined)),
 		},
+		{
+			"ATX headings",
+			[]Option{WithHeadingStyle(HeadingStyleATX)},
+			NewConfig(WithHeadingStyle(HeadingStyleATX)),
+		},
+		{
+			"ATX surround headings",
+			[]Option{WithHeadingStyle(HeadingStyleATXSurround)},
+			NewConfig(WithHeadingStyle(HeadingStyleATXSurround)),
+		},
+		{
+			"Setext headings",
+			[]Option{WithHeadingStyle(HeadingStyleSetext)},
+			NewConfig(WithHeadingStyle(HeadingStyleSetext)),
+		},
+		{
+			"Setext full width headings",
+			[]Option{WithHeadingStyle(HeadingStyleFullWidthSetext)},
+			NewConfig(WithHeadingStyle(HeadingStyleFullWidthSetext)),
+		},
 	}
 
 	for _, tc := range cases {
