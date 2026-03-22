@@ -289,6 +289,9 @@ func (r *Renderer) renderList(node ast.Node, entering bool) ast.WalkStatus {
 }
 
 func (r *Renderer) renderListItem(node ast.Node, entering bool) ast.WalkStatus {
+	if len(r.rc.lists) == 0 {
+		return ast.WalkStop
+	}
 	if entering {
 		var itemPrefix []byte
 		l := r.rc.lists[len(r.rc.lists)-1]
