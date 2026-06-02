@@ -6,7 +6,7 @@ import (
 	"log"
 	"regexp"
 
-	markdown "github.com/teekennedy/goldmark-markdown"
+	markdown "github.com/ryancahildebrandt/goldmark-markdown"
 	"github.com/yuin/goldmark"
 	"github.com/yuin/goldmark/ast"
 	"github.com/yuin/goldmark/parser"
